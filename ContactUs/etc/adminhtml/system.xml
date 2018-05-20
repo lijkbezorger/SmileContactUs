@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Module admin configuration file
+ *
+ * @category  Smile
+ * @package   Smile\ContactUs
+ * @author    Yaroslav Velychko <lijkbezorger@gmail.com>
+ * @copyright 2018 Yaroslav Velychko
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="smile" translate="label" sortOrder="10">
+            <label>Smile</label>
+        </tab>
+        <section id="contact_us" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Contact Us</label>
+            <tab>smile</tab>
+            <resource>Smile_ContactUs::countact_us_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>General Configuration</label>
+                <field id="default_request_status" translate="label" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Default request status</label>
+                    <source_model>Smile\ContactUs\Model\Config\Source\DefaultRequestStatus</source_model>
+                    <comment>This status will be set by default for new requests.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Dependency Injection config
+ *
+ * @category  Smile
+ * @package   Smile\ContactUs
+ * @author    Yaroslav Velychko <lijkbezorger@gmail.com>
+ * @copyright 2018 Yaroslav Velychko
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Smile\ContactUs\Model\ResourceModel\Request\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">smile_contact_us_request</argument>
+            <argument name="resourceModel" xsi:type="string">Smile\ContactUs\Model\ResourceModel\Request</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="smile_request_listing_data_source" xsi:type="string">
+                    Smile\ContactUs\Model\ResourceModel\Request\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

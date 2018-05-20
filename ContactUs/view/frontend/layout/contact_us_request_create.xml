@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Create request page
+ *
+ * @category  Smile
+ * @package   Smile\ContactUs
+ * @author    Yaroslav Velychko <lijkbezorger@gmail.com>
+ * @copyright 2018 Yaroslav Velychko
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Smile\ContactUs\Block\Form\RequestFormBlock" name="contact_us_request_form"
+                   template="Smile_ContactUs::form/request-form.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

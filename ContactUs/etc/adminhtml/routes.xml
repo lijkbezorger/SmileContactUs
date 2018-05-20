@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Backend router for module
+ *
+ * @category  Smile
+ * @package   Smile\ContactUs
+ * @author    Yaroslav Velychko <lijkbezorger@gmail.com>
+ * @copyright 2018 Yaroslav Velychko
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="admin_contact_us" frontName="admin_contact_us">
+            <module name="Smile_ContactUs"/>
+        </route>
+    </router>
+</config>

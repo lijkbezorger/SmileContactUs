@@ -1,0 +1,83 @@
+<?php
+/**
+ * Admin view page block
+ *
+ * @category  Smile
+ * @package   Smile\ContactUs
+ * @author    Yaroslav Velychko <lijkbezorger@gmail.com>
+ * @copyright 2018 Yaroslav Velychko
+ */
+
+use Magento\Framework\View\TemplateEngine\Php;
+use Smile\ContactUs\Block\Adminhtml\ViewPageBlock;
+
+/**
+ * @var $block ViewPageBlock
+ * @var $this Php
+ */
+
+?>
+
+<h2><?php echo $block->getTitle() ?></h2>
+<hr>
+<div class="control">
+    <a href="<?php echo $block->getIndexAction() ?>">
+        Back to list
+    </a>
+    |
+    <a href="<?php echo $block->getUpdateAction() ?>">
+        Update
+    </a>
+</div>
+<hr>
+<div class="request-view-wrapper">
+    <div class="field">
+        <span>Topic</span>:&nbsp;
+        <span>
+            <b>
+                <?php echo $block->getModel()->getTopic() ?>
+            </b>
+        </span>
+    </div>
+    <div class="field">
+        <span>Email</span>:&nbsp;
+        <span>
+            <b>
+                <?php echo $block->getModel()->getEmail() ?>
+            </b>
+        </span>
+    </div>
+    <div class="field">
+        <span>Request text</span>:&nbsp;
+        <span>
+            <b>
+                <?php echo $block->getModel()->getRequestText() ?>
+            </b>
+        </span>
+    </div>
+    <div class="field">
+        <span>Status</span>:&nbsp;
+        <span>
+            <b>
+                <?php echo $block->getStatus() ?>
+            </b>
+        </span>
+    </div>
+    <div class="field">
+        <span>Created at</span>:&nbsp;
+        <span>
+            <b>
+                <?php echo $block->getModel()->getCreatedAt() ?>
+            </b>
+        </span>
+    </div>
+    <div class="field">
+        <span>Updated at</span>:&nbsp;
+        <span>
+            <b>
+                <?php echo $block->getModel()->getUpdatedAt() ?>
+            </b>
+        </span>
+    </div>
+</div>
+

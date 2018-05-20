@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/**
+ * Editing menu items
+ *
+ * @category  Smile
+ * @package   Smile\ContactUs
+ * @author    Yaroslav Velychko <lijkbezorger@gmail.com>
+ * @copyright 2018 Yaroslav Velychko
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Smile_ContactUs::request"
+             title="Client requests"
+             translate="title"
+             module="Smile_ContactUs"
+             sortOrder="100"
+             parent="Magento_Backend::content_elements"
+             action="admin_contact_us/request/index"
+             resource="Smile_ContactUs::general_config"/>
+    </menu>
+</config>
